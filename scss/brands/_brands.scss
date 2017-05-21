@@ -1,0 +1,201 @@
+.brands {
+    padding: 40px 0;
+    background-color: $red;
+    background-size: 10px;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23630711' fill-opacity='0.18' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+
+    @include mobile-tablet {
+        padding: 40px 0 20px;
+    }
+
+    &__wrapper {
+        display: flex;
+        margin-bottom: 40px;
+
+        @include mobile {
+            flex-direction: column;
+        }
+    }
+
+    &__title {
+        overflow: hidden;
+        position: relative;
+        font-weight: bold;
+        font-size: 24px;
+        text-transform: uppercase;
+        color: $white;
+        width: 350px;
+        padding: 30px;
+        background: linear-gradient(to left, $white, $red);
+
+        @include mobile {
+            width: 100%;
+        }
+
+        &::after {
+            content: '';
+            transform: rotate(180deg);
+            background: url('../img/gradient.svg') no-repeat;
+            background-size: 40%;
+            position: absolute;
+            z-index: 10;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            right: -1px;
+        }
+    }
+
+    &__list {
+        right: 0;
+        height: 150px;
+        flex-grow: 1;
+        background: $white;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        @include mobile {
+            flex-wrap: wrap;
+            padding: 20px 0 0;
+            height: auto;
+        }
+    }
+
+    &__logo {
+        height: 90px;
+        width: 200px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+
+        @include desktop {
+            height: 45px;
+            width: 100px;
+        }
+
+        @include tablet {
+            height: 45px;
+            width: 100px;
+        }
+
+        @include mobile {
+            height: 67px;
+            width: 150px;
+            margin-bottom: 20px;
+        }
+
+        &--hilti {
+            background-image: url('../img/hilti.svg');
+        }
+
+        &--testo {
+            background-image: url('../img/testo.png');
+        }
+
+        &--knipex {
+            background-image: url('../img/knipex.png');
+        }
+
+        &--krause {
+            background-image: url('../img/krause.png');
+        }
+    }
+}
+
+.workflow {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+
+    @include mobile-tablet {
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        background: $white;
+        width: calc(25% - 25px);
+
+        @include desktop {
+            width: calc(25% - 15px);
+        }
+
+        @include tablet {
+            width: calc(50% - 15px);
+            margin-bottom: 20px;
+        }
+
+        @include mobile {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__description {
+        padding: 20px;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    &__photo {
+        position: relative;
+        background: $white no-repeat;
+        background-size: cover;
+        height: 200px;
+        filter: grayscale(100%);
+        transition: 0.3s filter;
+
+        @include desktop {
+            height: 150px;
+        }
+
+        @include mobile {
+            height: 150px;
+        }
+
+        &:hover {
+            filter: grayscale(0%);
+        }
+
+        &::before {
+            content: '';
+            background: url('../img/gradient3.svg') no-repeat;
+            background-size: 30%;
+            position: absolute;
+            z-index: 10;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        &::after {
+            content: '';
+            transform: rotate(180deg);
+            background: url('../img/gradient3.svg') no-repeat;
+            background-size: 50%;
+            position: absolute;
+            z-index: 10;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            right: 0;
+        }
+
+        &--hilti {
+            background-image: url('../img/hilti-workflow.jpg');
+        }
+
+        &--testo {
+            background-image: url('../img/testo-workflow.jpg');
+        }
+
+        &--knipex {
+            background-image: url('../img/knipex-workflow.jpg');
+        }
+
+        &--krause {
+            background-image: url('../img/krause-workflow.jpg');
+        }
+    }
+}

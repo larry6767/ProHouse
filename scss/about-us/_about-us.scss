@@ -56,7 +56,9 @@
     &__photo {
         height: auto;
         width: 60%;
-        background: url('../img/about-us1.jpg');
+        background: url('../img/about-us.jpg');
+        filter: grayscale(100%);
+        transition: 0.3s filter;
         background-size: cover;
         background-position: top;
         position: relative;
@@ -64,8 +66,7 @@
         z-index: 100;
 
         &:hover {
-            background: url('../img/about-us2.jpg');
-            cursor: pointer;
+            filter: grayscale(0);
             background-size: cover;
         }
 
