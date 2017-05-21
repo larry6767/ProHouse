@@ -1,0 +1,117 @@
+.main-navigation {
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    height: 85px;
+    box-shadow: 0 0px 12px rgba(0,0,0,0.5);
+    position: relative;
+    z-index: 1000;
+
+    @include mobile {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    &__logo-wrapper {
+        position: relative;
+
+        @include mobile {
+            position: static;
+        }
+    }
+
+    &__logo {
+        background: url('../img/logo.png');
+        background-size: cover;
+        height: 120px;
+        width: 250px;
+        position: absolute;
+        z-index: 1000;
+
+        @include mobile {
+            background: url('../img/logoo.png');
+            height: 100px;
+            width: 230px;
+            background-size: cover;
+            position: static;
+        }
+    }
+
+    &__list {
+        list-style-type: none;
+        display: flex;
+        width: 900px;
+        justify-content: space-around;
+        padding: 40px 0 0px 0;
+
+
+        @include desktop {
+            width: 600px;
+        }
+
+        @include tablet {
+            width: 500px;
+        }
+
+        @include mobile {
+            flex-wrap: wrap;
+            width: 320px;
+            padding: 0 0 0 25px;
+        }
+    }
+
+    &__link {
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 14px;
+        color: #000;
+
+        &:hover {
+            color: #7b0411;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        &:after {
+            content: "/";
+            display: inline-block;
+            margin-left: 55px;
+
+            @include desktop {
+                margin-left: 25px;
+            }
+
+            @include tablet {
+                margin-left: 15px;
+            }
+
+            @include mobile {
+                margin: 0 0px 0 25px;
+            }
+        }
+
+        &--shares {
+            &:after {
+                @include mobile {
+                    content: "";
+                }
+            }
+        }
+
+        &--works {
+            &:after {
+                @include mobile {
+                    margin-left: 35px;
+                }
+            }
+        }
+
+        &--contacts {
+
+            &:after {
+                content: "";
+            }
+        }
+    }
+}

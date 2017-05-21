@@ -1,0 +1,49 @@
+.firms {
+    background: #7d0310;
+    padding: 60px 0 60px 0;
+    display: flex;
+
+    &__title {
+        font-weight: bold;
+        font-size: 24px;
+        text-transform: uppercase;
+        color: #fff;
+        width: 350px;
+        padding: 40px 40px 40px 30px;
+        background: linear-gradient(to left, #fff, #7d0310);
+    }
+
+    &__items {
+        right: 0;
+        height: 200px;
+        width: 1100px;
+        background: #fff;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    &__logo {
+        height: 90px;
+        width: 200px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+
+        &--hilti {
+            background-image: url('../img/hilti.svg');
+        }
+
+        &--testo {
+            background-image: url('../img/testo.png');
+        }
+
+        &--knipex {
+            background-image: url('../img/knipex.png');
+        }
+
+        &--krause {
+            background-image: url('../img/krause.png');
+        }
+    }
+}
