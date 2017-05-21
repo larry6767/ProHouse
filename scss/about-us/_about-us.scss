@@ -6,15 +6,18 @@
         flex-direction: column;
     }
 
-    &__about-text {
+    &__text-block {
+        width: 40%;
         padding: 40px 40px 20px 30px;
 
         @include desktop {
-            padding: 20px 40px 20px 20px;
+            width: 50%;
+            padding: 20px 40px 20px 30px;
         }
 
         @include mobile-tablet {
             text-align: center;
+            width: 100%;
         }
 
     }
@@ -36,11 +39,6 @@
         color: $dark-gray;
         margin-bottom: 15px;
 
-        &--tagline {
-            font-weight: bold;
-            color: $black;
-        }
-
         @include desktop {
             font-size: 14px;
         }
@@ -50,9 +48,14 @@
         }
     }
 
+    &__text-tagline {
+        font-weight: bold;
+        color: $black;
+    }
+
     &__photo {
-        height: 350px;
-        width: 880px;
+        height: auto;
+        width: 60%;
         background: url('../img/about-us1.jpg');
         background-size: cover;
         background-position: top;
@@ -67,29 +70,31 @@
         }
 
         &:before {
-            content: url('../img/gradient2.svg');
+            content: '';
+            background: url('../img/gradient2.svg') no-repeat;
+            background-size: 45%;
             position: absolute;
             z-index: 10;
             height: 100%;
-            width: 320px;
+            width: 100%;
             top: 0;
-            left: 0;
+            left: -10px;
 
             @include desktop {
-                width: 420px;
+                background-size: 60%;
             }
 
             @include tablet {
-                width: 317px;
+                background-size: 50%;
             }
 
             @include mobile {
-                width: 185px;
+                background-size: 60%;
             }
         }
 
         @include desktop {
-            height: 463px;
+            width: 50%;
         }
 
         @include tablet {

@@ -1,9 +1,17 @@
 .firms {
-    background: $red;
-    padding: 60px 0;
+    background-color: $red;
+    background-size: 10px;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23630711' fill-opacity='0.18' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+    padding: 40px 0;
     display: flex;
 
+    @include mobile {
+        flex-direction: column;
+    }
+
     &__title {
+        overflow: hidden;
+        position: relative;
         font-weight: bold;
         font-size: 24px;
         text-transform: uppercase;
@@ -11,6 +19,27 @@
         width: 350px;
         padding: 30px;
         background: linear-gradient(to left, $white, $red);
+
+        @include mobile {
+            width: 100%;
+        }
+
+        &::after {
+            content: '';
+            transform: rotate(180deg);
+            background: url('../img/gradient.svg') no-repeat;
+            background-size: 40%;
+            position: absolute;
+            z-index: 10;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            right: -1px;
+
+            @include mobile {
+                background-size: 40%;
+            }
+        }
     }
 
     &__list {
@@ -21,6 +50,12 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
+
+        @include mobile {
+            flex-wrap: wrap;
+            padding: 20px 0 0;
+            height: auto;
+        }
     }
 
     &__logo {
@@ -29,6 +64,22 @@
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
+
+        @include desktop {
+            height: 45px;
+            width: 100px;
+        }
+
+        @include tablet {
+            height: 45px;
+            width: 100px;
+        }
+
+        @include mobile {
+            height: 67px;
+            width: 150px;
+            margin-bottom: 20px;
+        }
 
         &--hilti {
             background-image: url('../img/hilti.svg');
