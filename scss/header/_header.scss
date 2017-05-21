@@ -1,7 +1,7 @@
 .main-navigation {
     display: flex;
     justify-content: space-between;
-    background: #fff;
+    background: $white;
     height: 85px;
     box-shadow: 0 0px 12px rgba(0,0,0,0.5);
     position: relative;
@@ -61,19 +61,9 @@
         }
     }
 
-    &__link {
-        text-transform: uppercase;
-        text-decoration: none;
-        font-size: 14px;
-        color: #000;
+    &__item {
 
-        &:hover {
-            color: #7b0411;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        &:after {
+        &:not(:last-child)::after {
             content: "/";
             display: inline-block;
             margin-left: 55px;
@@ -90,8 +80,23 @@
                 margin: 0 0px 0 25px;
             }
         }
+    }
+
+    &__link {
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 14px;
+        color: $black;
+        font-weight: bold;
+
+        &:hover {
+            color: $red;
+            font-weight: bold;
+            cursor: pointer;
+        }
 
         &--shares {
+
             &:after {
                 @include mobile {
                     content: "";
@@ -100,6 +105,7 @@
         }
 
         &--works {
+
             &:after {
                 @include mobile {
                     margin-left: 35px;
