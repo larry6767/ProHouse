@@ -1,0 +1,52 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 30px;
+    background: $black;
+
+    @include mobile {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &__logo {
+        background: $white url('../img/logo.svg') no-repeat;
+        background-size: cover;
+        height: 120px;
+        width: 250px;
+
+        @include mobile {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__contacts-list {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        color: $white;
+        font-size: 16px;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__contacts-item {
+        margin-bottom: 10px;
+    }
+
+    // &__question-text {
+    //     color: $white;
+    // }
+
+    // &__question-link {
+    //     color: $red;
+    //     text-decoration: none;
+    //     font-size: 20px;
+    //     font-weight: bold;
+
+    //     &:hover {
+    //         text-decoration: underline;
+    //     }
+    // }
+}
