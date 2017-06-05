@@ -11,9 +11,9 @@
     }
 
     &__logo {
-        background: $white url('../img/logo.svg') no-repeat;
+        background: url('../img/logo-footer.png') no-repeat;
         background-size: cover;
-        height: 120px;
+        height: 140px;
         width: 250px;
 
         @include mobile {
@@ -33,6 +33,12 @@
 
     &__contacts-item {
         margin-bottom: 10px;
+        color: $white;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
     // &__question-text {

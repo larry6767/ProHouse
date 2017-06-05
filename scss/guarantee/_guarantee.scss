@@ -1,0 +1,112 @@
+.guarantee {
+    display: flex;
+    justify-content: space-between;
+
+    @include mobile-tablet {
+        flex-direction: column;
+    }
+
+    &__text-block {
+        width: 40%;
+        padding: 120px 40px 120px 30px;
+
+        @include desktop {
+            width: 50%;
+            padding: 120px 40px 120px 30px;
+        }
+
+        @include mobile-tablet {
+            text-align: center;
+            width: 100%;
+            padding: 40px 40px 40px 30px;
+        }
+
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 24px;
+        text-transform: uppercase;
+        color: $red;
+        margin-bottom: 15px;
+
+        @include mobile {
+            font-size: 18px;
+        }
+    }
+
+    &__text {
+        font-size: 16px;
+        color: $dark-gray;
+        margin-bottom: 15px;
+
+        @include desktop {
+            font-size: 14px;
+        }
+
+        @include mobile {
+            font-size: 14px;
+        }
+    }
+
+    &__text-tagline {
+        font-weight: bold;
+        color: $black;
+    }
+
+    &__photo {
+        height: auto;
+        width: 60%;
+        background: url('../img/about-us.jpg');
+        filter: grayscale(100%);
+        transition: 0.3s filter;
+        background-size: cover;
+        background-position: top;
+        position: relative;
+        overflow: hidden;
+        z-index: 100;
+
+        &:hover {
+            filter: grayscale(0);
+            background-size: cover;
+        }
+
+        &:before {
+            content: '';
+            background: url('../img/gradient2.svg') no-repeat;
+            background-size: 45%;
+            position: absolute;
+            z-index: 10;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: -10px;
+
+            @include desktop {
+                background-size: 60%;
+            }
+
+            @include tablet {
+                background-size: 50%;
+            }
+
+            @include mobile {
+                background-size: 60%;
+            }
+        }
+
+        @include desktop {
+            width: 50%;
+        }
+
+        @include tablet {
+            height: 350px;
+            width: 100%;
+        }
+
+        @include mobile {
+            height: 200px;
+            width: 100%;
+        }
+    }
+}
