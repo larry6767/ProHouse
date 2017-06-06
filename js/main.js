@@ -2,15 +2,23 @@ $(document).ready(function () {
   if ($(window).width() >= '1440') {
     $('.x-slider-iframe').attr('width', 536);
     $('.x-slider-iframe').attr('height', 350);
+    $('.x-to-iframe').attr('width', 800);
+    $('.x-to-iframe').attr('height', 450);
   } else if ($(window).width() >= '1024') {
     $('.x-slider-iframe').attr('width', 448);
     $('.x-slider-iframe').attr('height', 250);
+    $('.x-to-iframe').attr('width', 600);
+    $('.x-to-iframe').attr('height', 350);
   } else if ($(window).width() >= '768') {
     $('.x-slider-iframe').attr('width', 550);
     $('.x-slider-iframe').attr('height', 300);
+    $('.x-to-iframe').attr('width', 600);
+    $('.x-to-iframe').attr('height', 350);
   } else if ($(window).width() >= '320') {
     $('.x-slider-iframe').attr('width', 300);
     $('.x-slider-iframe').attr('height', 200);
+    $('.x-to-iframe').attr('width', 300);
+    $('.x-to-iframe').attr('height', 200);
   }
 
   $('.x-slider').slick({
