@@ -14,7 +14,7 @@ var svgmin = require('gulp-svgmin');
 var copy = require('gulp-contrib-copy');
 var clean = require('gulp-contrib-clean');
 var injectSvg = require('gulp-inject-svg');
-var inline_base64 = require('gulp-inline-base64');
+// var inline_base64 = require('gulp-inline-base64');
 var inlineimg = require('gulp-inline-image-html');
 var inlineImagePath = require('gulp-inline-image-path');
 var preprocess = require('gulp-preprocess');
@@ -25,10 +25,10 @@ gulp.task('style', function () {
         .pipe(plumber())
         // .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
-        .pipe(inline_base64({
-            maxSize: 14 * 1024,
-            debug: true
-        }))
+        // .pipe(inline_base64({
+        //     maxSize: 14 * 1024,
+        //     debug: true
+        // }))
         .pipe(postcss([
             autoprefixer({
                 browsers: [

@@ -1,5 +1,6 @@
 .reviews {
   background-color: $white;
+  overflow: hidden;
 
   &::before,
   &::after {

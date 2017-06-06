@@ -1,0 +1,420 @@
+.installation {
+
+    &__block {
+        width: 100%;
+        height: 240px;
+        display: flex;
+
+        @include desktop {
+            height: 190px;
+        }
+
+        @include tablet {
+            height: 140px;
+        }
+
+        @include mobile {
+            flex-direction: column;
+            height: auto;
+        }
+    }
+
+    &__text-block {
+        position: relative;
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: $black;
+
+        &--mobile-first {
+
+            @include mobile {
+                order: -1;
+            }
+        }
+
+        &--mobile-last {
+
+            @include mobile {
+                order: 1;
+            }
+        }
+
+        &--w15 {
+            width: 15%;
+        }
+
+        &--w5 {
+            width: 5%;
+        }
+
+        &--w0 {
+            width: 0%;
+        }
+
+        @include mobile {
+            width: 100%;
+            padding: 0 10px;
+        }
+    }
+
+    &__title {
+        text-transform: uppercase;
+        font-size: 24px;
+        font-weight: bold;
+        margin: 0 auto 10px;
+
+        @include desktop {
+            font-size: 18px;
+            width: 600px;
+            position: relative;
+            z-index: 101;
+            left: -90px;
+        }
+
+        @include tablet {
+            font-size: 12px;
+            width: 400px;
+            position: relative;
+            z-index: 101;
+            left: -50px;
+            margin-bottom: 5px;
+        }
+
+        @include mobile {
+            font-size: 14px;
+            text-align: center;
+            margin-top: 30px;
+        }
+    }
+
+    &__text {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 24px;
+
+        &--mt {
+
+            @include mobile {
+                margin-top: 30px;
+            }
+        }
+
+        @include desktop {
+            font-size: 18px;
+            width: 400px;
+            position: relative;
+            z-index: 101;
+        }
+
+        @include tablet {
+            font-size: 12px;
+            width: 300px;
+            position: relative;
+            z-index: 101;
+            left: 20px;
+        }
+
+        @include mobile {
+             font-size: 14px;
+             margin-bottom: 30px;
+        }
+
+        &--small {
+            font-size: 16px;
+            text-transform: none;
+
+            @include desktop {
+                font-size: 14px;
+            }
+
+            @include tablet {
+                font-size: 10px;
+            }
+
+            @include mobile {
+                text-align: center;
+            }
+        }
+
+        &--red {
+            color: $red;
+        }
+    }
+
+    &__description {
+        font-weight: bold;
+        font-size: 16px;
+        position: absolute;
+        z-index: 101;
+
+        @include desktop {
+            font-size: 14px;
+        }
+
+        @include tablet {
+            font-size: 10px;
+        }
+
+        @include mobile {
+            display: none;
+        }
+
+        &--mobile-show {
+
+            @include mobile {
+                display: block;
+                position: static;
+                font-size: 12px;
+                width: 100%;
+                padding: 10px;
+                text-align: center;
+            }
+        }
+
+        &--center {
+            top: 70px;
+            left: -60px;
+            width: calc(100% + 150px);
+
+            @include desktop {
+                top: 40px;
+                left: -30px;
+            }
+
+            @include tablet {
+                top: 20px;
+                left: -25px;
+                width: 160px;
+            }
+        }
+
+        &--center-short-l {
+            top: 100px;
+            left: -80px;
+            width: 200px;
+
+            @include desktop {
+                width: 150px;
+                left: -140px;
+            }
+
+            @include tablet {
+                left: -140px;
+                width: 150px;
+            }
+        }
+
+        &--center-short-r {
+            top: 100px;
+            left: -80px;
+            width: 200px;
+
+            @include desktop {
+                width: 150px;
+                top: 70px;
+                left: 20px;
+            }
+
+            @include tablet {
+                top: 30px;
+                left: 20px;
+                width: 150px;
+            }
+        }
+
+        &--left {
+            margin-right: 20px;
+            left: -150px;
+            bottom: 20px;
+
+            @include tablet {
+                bottom: 5px;
+                width: 200px;
+                left: -90px;
+            }
+        }
+
+        &--left-mobile {
+
+            @include tablet {
+                width: 120px;
+                left: -120px;
+            }
+        }
+
+        &--right {
+            margin-left: 20px;
+            right: -150px;
+            top: 20px;
+
+            @include tablet {
+                top: 5px;
+                width: 200px;
+                right: -100px;
+            }
+        }
+
+        &--right-mobile {
+
+            @include tablet {
+                width: 100px;
+                right: -110px;
+            }
+        }
+    }
+
+    &__photo {
+        height: auto;
+        width: 35%;
+        background: url('../img/about-us.jpg');
+        filter: grayscale(100%);
+        transition: 0.3s filter;
+        background-size: cover;
+        background-position: top;
+        position: relative;
+        overflow: hidden;
+        z-index: 100;
+        font-size: 0;
+
+        &:hover {
+            filter: grayscale(0);
+            background-size: cover;
+        }
+
+        &::before {
+            content: '';
+            background: url('../img/gradient2.svg') no-repeat;
+            background-size: 45%;
+            position: absolute;
+            z-index: 10;
+            height: 100%;
+            width: 100%;
+            top: 0;
+
+            @include desktop {
+                background-size: 60%;
+            }
+
+            @include tablet {
+                background-size: 50%;
+            }
+
+            @include mobile {
+                background-size: 60%;
+            }
+        }
+
+        &--center {
+            width: 60%;
+
+            &::before {
+                width: 60%;
+
+                @include tablet {
+                    width: 70%;
+                }
+
+                @include mobile {
+                    display: none;
+                }
+            }
+
+            &::after {
+                content: '';
+                transform: rotate(180deg);
+                background: url('../img/gradient2.svg') no-repeat;
+                background-size: 45%;
+                position: absolute;
+                z-index: 10;
+                height: 100%;
+                width: 70%;
+                top: 0;
+                right: -5px;
+
+                @include desktop {
+                    background-size: 60%;
+                }
+
+                @include tablet {
+                    background-size: 50%;
+                    width: 80%;
+                }
+
+                @include mobile {
+                    background-size: 60%;
+                    width: 90%;
+                }
+            }
+        }
+
+        &--center-short {
+            width: 50%;
+        }
+
+        &--right {
+
+            &::before {
+                left: -5px;
+            }
+        }
+
+        &--left {
+
+            &::before {
+                transform: rotate(180deg);
+                right: -5px;
+            }
+        }
+
+        @include desktop {
+            width: 50%;
+        }
+
+        @include tablet {
+            width: 100%;
+        }
+
+        @include mobile {
+            width: 100%;
+            height: 200px;
+            font-size: 14px;
+        }
+    }
+
+    &__photo-description {
+        display: none;
+        position: absolute;
+        width: 150px;
+        z-index: 101;
+
+        @include mobile {
+            display: block;
+        }
+
+        &--left {
+            left: 10px;
+            top: 15px;
+        }
+
+        &--right {
+            right: 10px;
+            bottom: 15px;
+            text-align: right;
+        }
+    }
+
+    &__delimiter {
+        width: 100%;
+        height: 40px;
+        background-color: $red;
+        background-size: 10px;
+        background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23630711' fill-opacity='0.18' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+
+        @include mobile {
+            order: 100;
+        }
+    }
+}
