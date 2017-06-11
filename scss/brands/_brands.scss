@@ -11,6 +11,7 @@
     &__wrapper {
         display: flex;
         margin-bottom: 40px;
+        background: $white;
 
         @include mobile {
             flex-direction: column;
@@ -54,6 +55,11 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
+
+        @include tablet {
+            flex-wrap: wrap;
+            padding: 25px 0 0;
+        }
 
         @include mobile {
             flex-wrap: wrap;
@@ -99,6 +105,10 @@
 
         &--krause {
             background-image: url('../img/krause.png');
+        }
+
+        &--karcher {
+            background-image: url('../img/karcher.jpg');
         }
     }
 }
