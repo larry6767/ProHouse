@@ -2,19 +2,19 @@
 <section class="first-screen">
   <div class="first-screen__title">Мы - лучшая монтажная организация<br> сплит систем города Ростова-на-Дону!</div>
   <div class="first-screen__form-wrapper">
-    <div class="first-screen__form">
+    <form class="first-screen__form">
       <div class="first-screen__form-title">Заказать консультацию!</div>
       <div class="first-screen__form-item">Закажите бесплатную консультацию:</div>
       <div class="first-screen__form-item">- мы подскажем</div>
       <div class="first-screen__form-item">- подготовим проект и смету</div>
-      <input class="first-screen__form-input" type="text" id="call-number" placeholder="Оставить номер телефона"></input>
-      <submit class="first-screen__form-button">Заказать консультацию</submit>
+      <input class="first-screen__form-input" type="tel" id="call-number" placeholder="Оставить номер телефона"></input>
+      <input type="submit" class="first-screen__form-button" value="Заказать консультацию">
       <div class="first-screen__form-note">Заполнение заявки Вас ни к чему не обязывает!</div>
       <div class="first-screen__form-note">Вы сможете отказаться в любой момент.</div>
-    </div>
+    </form>
   </div>
 </section>
-<section class="about-us">
+<section class="about-us" id="about">
   <div class="about-us__text-block">
     <div class="about-us__title">О нас</div>
     <div class="about-us__text"><span class="about-us__text-tagline">Уже 5 лет на рынке мы занимаемся установкой, сервисным обслуживанием и продажей сплит систем. Наши специалисты пользуются новейшим профессиональным оборудованием, которое мы обновляем каждый год.<br>
@@ -52,13 +52,13 @@
     </div>
   </div>
 </section>
-<section class="features">
+<section class="features" id="features">
   <div class="features__item features__item--1">Бесплатный замер и консультация специалиста</div>
   <div class="features__item features__item--2">5% скидка на работу, если в день замера вы назначите дату монтажа</div>
   <div class="features__item features__item--3">При покупке сплит-системы TOSOT любой серии - монтаж в подарок</div>
 </section>
 
-<section class="installation">
+<section class="installation" id="installation">
   <div class="installation__block">
     <div class="installation__photo installation__photo--left">
       <div class="installation__photo-description installation__photo-description--right">
@@ -68,8 +68,8 @@
     <div class="installation__text-block installation__text-block--mobile-first">
       <div class="installation__title">Монтаж сплит системы происходит в два этапа:</div>
       <div class="installation__text">первый этап - <span class="installation__text--red">черновой монтаж</span></div>
-      <div class="installation__description installation__description--right">1. Консультация специалиста / диалог с заказчиком</div>
-      <div class="installation__description installation__description--left">2. Разметка тафарета и штробы для фреоновой магистрали</div>
+      <div class="installation__description installation__description--right">2. Разметка тафарета и штробы для фреоновой магистрали</div>
+      <div class="installation__description installation__description--left">1. Консультация специалиста / диалог с заказчиком</div>
     </div>
     <div class="installation__photo installation__photo--right" style="background-image: url('img/installation/1.2.jpg');">
       <div class="installation__photo-description installation__photo-description--left">
@@ -98,16 +98,16 @@
   </div>
 
   <div class="installation__block">
-    <div class="installation__photo installation__photo--left">
-      <div class="installation__photo-description installation__photo-description--right" style="background-image: url('img/installation/1.5.jpg');">
+    <div class="installation__photo installation__photo--left" style="background-image: url('img/installation/1.5.jpg');">
+      <div class="installation__photo-description installation__photo-description--right">
         5. Подготовка магистрали к укладке
       </div>
     </div>
     <div class="installation__text-block installation__text-block--w0">
       <div class="installation__description installation__description--center-short-l">5. Подготовка магистрали к укладке</div>
     </div>
-    <div class="installation__photo installation__photo--center">
-      <div class="installation__photo-description installation__photo-description--right" style="background-image: url('img/installation/1.6.jpg');">
+    <div class="installation__photo installation__photo--center" style="background-image: url('img/installation/1.6.jpg');">
+      <div class="installation__photo-description installation__photo-description--right">
         6. Закладка магистрали в шробу
       </div>
     </div>
@@ -138,15 +138,15 @@
 
 <section class="installation">
   <div class="installation__block">
-    <div class="installation__photo installation__photo--left" style="background-image: url('img/installation/2.1.jpg');">
+    <a href="img/installation/2.1.jpg" data-lightbox="installation" class="installation__photo installation__photo--left" style="background-image: url('img/installation/2.1.jpg');">
       <div class="installation__photo-description installation__photo-description--right">
         1. Подготовка внутреннего блока к монтажу.
       </div>
-    </div>
+    </a>
     <div class="installation__text-block installation__text-block--mobile-first">
       <div class="installation__text installation__text--mt">Второй этап - <span class="installation__text--red">чистовой</span></div>
-      <div class="installation__description installation__description--right">1. Подготовка внутреннего блока к монтажу. </div>
-      <div class="installation__description installation__description--left">2. Разметка трафарета и крепление монтажной пластины</div>
+      <div class="installation__description installation__description--right">2. Разметка трафарета и крепление монтажной пластины</div>
+      <div class="installation__description installation__description--left">1. Подготовка внутреннего блока к монтажу.</div>
     </div>
     <div class="installation__photo installation__photo--right">
       <div class="installation__photo-description installation__photo-description--left">
@@ -205,7 +205,7 @@
     <div class="installation__text-block installation__text-block--w0">
       <div class="installation__description installation__description--center-short-r">8. Запуск системы и передача заказчику</div>
     </div>
-    <div class="installation__photo installation__photo--right">
+    <div class="installation__photo installation__photo--right" style="background-image: url('img/installation/2.8.jpg');">
       <div class="installation__photo-description installation__photo-description--left">
         8. Запуск системы и передача заказчику
       </div>
@@ -223,7 +223,7 @@
   <div class="installation__delimiter"></div>
 </section>
 
-<section class="service">
+<section class="service" id="service">
   <div class="service__title">Отдельным направлением нашей деятельности является <div class="service__title--red">техобслуживание cплит-cистем.</div></div>
   <div class="service__text">Для техобслуживания, которое рекомендуется проводить каждый год в начале сезона, для оптимальной работы cплит-cистемы мы используем лучшее оборудование из существующего на сегодняшний день и по этому добиваемся 100 процентного результата!</div>
   <iframe class="x-to-iframe" src="https://www.youtube.com/embed/4LEhpOCli64" frameborder="0" allowfullscreen></iframe>
@@ -385,33 +385,28 @@
     <div class="guarantee__title">Гарантия качества</div>
     <div class="guarantee__text">На все выполненные нашей организацией работы распространяются гарантийные обязательства от шести месяцев до пяти лет. В обеспечении гарантийных обязательств заказчику предоставляется весь пакет документов</div>
   </div>
-  <div class="guarantee__photo"></div>
+  <div class="guarantee__photo" style="background-image: url('img/guarantee.jpg');"></div>
 </section>
-<section class="reviews">
+<section class="reviews" id="reviews">
   <div class="reviews-container">
     <div class="reviews__title">Отзывы наших клиентов</div>
     <div class="slider-wrapper">
       <div class="slider x-slider">
+
         <div class="slider__item">
           <div class="slider__item-container">
             <iframe class="x-slider-iframe" src="https://www.youtube.com/embed/AWaV7VIPm-w" frameborder="0" allowfullscreen></iframe>
+            <div class="slider__text">Отзыв Альберта Карелина - зам. Директора сети магазинов сантехники г. Ростова-на-Дону</div>
           </div>
         </div>
+
         <div class="slider__item">
           <div class="slider__item-container">
-            <div class="slider__column">
-              <div class="slider__img-big">
-                <iframe class="x-slider-iframe" src="https://www.youtube.com/embed/AWaV7VIPm-w" frameborder="0" allowfullscreen></iframe>
-              </div>
-            </div>
-            <div class="slider__column">
-              <div class="slider__img-small slider__img-small--1"></div>
-              <div class="slider__text-wrapper"></div>
-                <div class="slider__title">Андрей Марков</div>
-                <div class="slider__text">Я занимаюсь прорабской деятельностью более 13 лет. В последнее время сотрудничаю с бригадой rem.team. Ответственные и компетентные работники, делающее всё в срок. Особенно выручают, когда горят сроки — готовы работать и днём, и ночью без перерывов и выходных. Ребята завершили у меня более 10 обьектов, нареканий нет.</div>
-            </div>
+            <div class="slider__photo"></div>
+            <div class="slider__text">Я занимаюсь прорабской деятельностью более 13 лет. В последнее время сотрудничаю с бригадой rem.team. Ответственные и компетентные работники, делающее всё в срок. Особенно выручают, когда горят сроки — готовы работать и днём, и ночью без перерывов и выходных. Ребята завершили у меня более 10 обьектов, нареканий нет.</div>
           </div>
         </div>
+
       </div>
     </div>
   </div>
@@ -428,14 +423,25 @@
   <div class="callback__text-block">
     <div class="callback__title">Остались вопросы?</div>
     <div class="callback__text">
-      Позвоните по номеру <a class="callback__link" href="tel:89198932563">8(919)893-25-63</a>
+      Позвоните по номеру <a class="callback__link" href="tel:89281995151">8(928)199-51-51</a>
       <br>
       Пишите нам <a class="callback__link" href="mailto:89281995151@yandex.ru">89281995151@yandex.ru</a>
       <br>
       Или вы можете заказать обратный звонок:
     </div>
-    <div class="callback__button">Заказать обратный звонок</div>
+    <div class="callback__button x-show-modal">Заказать обратный звонок</div>
   </div>
   <div class="callback__photo"></div>
 </section>
+<div style="display: none;">
+  <div class="modal-content x-modal-content">
+    <div class="box-modal_close arcticmodal-close"></div>
+    <div class="form-title">Заказать звонок</div>
+    <form action="" class="form ajax_form modal-content__form" method="post" action="mail.php">
+      <input type="text" name="name" id="name" placeholder="Ваше имя">
+      <input type="tel" name="phone" id="phone" placeholder="Ваш телефон">
+      <input type="submit" value="Заказать" class="submit-button">
+    </form>
+  </div>
+</div>
 <!-- @endextend -->

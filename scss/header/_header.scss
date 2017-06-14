@@ -73,18 +73,18 @@
         &::after {
             content: '/';
             display: inline-block;
-            margin-left: 50px;
+            margin-left: 45px;
 
             @include desktop {
-                margin-left: 20px;
+                margin-left: 15px;
             }
 
             @include tablet {
-                margin-left: 8px;
+                margin-left: 5px;
             }
 
             @include mobile {
-                margin: 0 0 0 18px;
+                margin: 0 0 0 10px;
             }
         }
 
@@ -92,7 +92,7 @@
             content: '';
         }
 
-        &--shares {
+        &--installation {
 
             &:after {
                 @include mobile {
@@ -101,16 +101,16 @@
             }
         }
 
-        &--works {
+        &--service {
 
             &:after {
                 @include mobile {
-                    margin-left: 23px;
+                    margin-left: 30px;
                 }
             }
         }
 
-        &--contacts {
+        &--reviews {
 
             &:after {
                 content: '';

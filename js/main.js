@@ -1,4 +1,21 @@
 $(document).ready(function () {
+
+  $("input[type='tel']").mask("+7 (999) 999-99-99");
+
+  $("a[href='#']").click(function(e) {
+      e.preventDefault();
+  });
+
+  $("a.main-navigation__link").click(function() {
+    $("html, body").animate({
+       scrollTop: $($(this).attr("href")).offset().top + "px"
+    }, {
+       duration: 500,
+       easing: "swing"
+    });
+    return false;
+  });
+
   if ($(window).width() >= '1440') {
     $('.x-slider-iframe').attr('width', 536);
     $('.x-slider-iframe').attr('height', 350);
@@ -39,5 +56,51 @@ $(document).ready(function () {
               arrows: !1
           }
       }]
+  });
+
+  //from submit
+  $('form').submit(function(e) {
+    e.preventDefault();
+    ajaxSubmit($(this));
+  });
+
+  function ajaxSubmit(item) {
+    console.log("ajaxSubmit" + item);
+    var msg = $(item).serialize();
+    $.ajax({
+      type: "POST",
+      url: "mail.php",
+      data: msg,
+      success: function(data) {
+          alert(data);
+          $.arcticmodal('close');
+      },
+      error: function(xhr, str) {
+          alert("Возникла ошибка!" + str);
+      }
+    });
+  }
+
+  //modal content
+  $(".x-show-modal").click(function(argument) {
+    var btn = $(this);
+    var item = btn.closest(".item").children(".title").html();
+    var subItem = btn.closest(".goods-filter").children(".goods__column-title").html();
+    if (item !== undefined) {
+      item = item + " " + subItem
+    } else if (item == undefined) {
+      item = btn.attr("title");
+      if (item == undefined) {
+        item = btn.html();
+      }
+    }
+    if (btn.hasClass("btn-order")) {
+      item = "Для участия в акции сообщите нам:";
+    }
+    $('.x-modal-content').arcticmodal({
+      beforeOpen: function(data, el) {
+        el.find(".form-title").text(item);
+      }
+    });
   });
 });

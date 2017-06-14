@@ -1,0 +1,89 @@
+.box-modal_close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    width: 27px;
+    height: 27px;
+    background: url("../img/lightbox/close.png");
+    filter: brightness(50%);
+}
+
+.modal-content {
+    width: 30em;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 0 20px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    cursor: default;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.form-title {
+    font-weight: bold;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: $red;
+    margin-bottom: 15px;
+
+    @include mobile {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+}
+.modal-content__form {
+    display: flex;
+    width: auto;
+    align-items: center;
+    flex-direction: column;
+}
+.modal-content input {
+    border-radius: 2px;
+    background: $white;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 auto;
+    padding: 10px 0;
+    width: 325px;
+    border: none;
+    margin-bottom: 15px;
+    outline: none;
+
+    &:hover,
+    &:focus {
+        border: 2px solid $gray;
+        padding: 8px 0;
+    }
+
+    @include mobile {
+        width: 260px;
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+}
+.modal-content .submit-button {
+    border-radius: 2px;
+    background: $red;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $white;
+    margin: 0 auto;
+    padding: 10px 0;
+    width: 325px;
+    margin-bottom: 15px;
+
+    &:hover {
+        cursor: pointer;
+        background: $dark-gray;
+        color: $white;
+    }
+
+    @include mobile {
+        width: 260px;
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+}

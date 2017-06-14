@@ -36,8 +36,9 @@
     }
 
     &__text {
+        font-weight: 700;
         font-size: 16px;
-        color: $dark-gray;
+        color: $black;
         margin-bottom: 15px;
 
         @include desktop {
@@ -57,9 +58,9 @@
     &__photo {
         height: auto;
         width: 60%;
-        background: url('../img/about-us.jpg');
         filter: grayscale(100%);
         transition: 0.3s filter;
+        background-repeat: no-repeat;
         background-size: cover;
         background-position: top;
         position: relative;
